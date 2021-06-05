@@ -6,21 +6,45 @@
   "engines": {
     "vscode": "^1.30.0"
   },
+  "publisher": "adi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/13168335674/vscode-vue-components-helper"
+  },
   "categories": [
     "Snippets",
     "Other"
   ],
   "activationEvents": [
-    "onCommand:vscode-vue-components-helper.helloWorld"
+    "onLanguage:html",
+    "onLanguage:javascript",
+    "onLanguage:vue"
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "vscode-vue-components-helper.helloWorld",
-        "title": "Hello World"
+    "configuration": {
+      "type": "object",
+      "title": "Vscode Vue Components Helper Configuration",
+      "properties": {
+        "vscode-vue-components-helper.indent-size": {
+          "type": "number",
+          "default": 2,
+          "description": "Indentation size of snippets"
+        },
+        "vscode-vue-components-helper.quotes": {
+          "type": "string",
+          "default": "double"
+        },
+        "vscode-vue-components-helper.tags-file-path": {
+          "type": "string",
+          "default": "path/tags.js"
+        },
+        "vscode-vue-components-helper.attrs-file-path": {
+          "type": "string",
+          "default": "path/attrs.js"
+        }
       }
-    ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "yarn run compile",
@@ -31,16 +55,22 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.56.0",
     "@types/glob": "^7.1.3",
     "@types/mocha": "^8.0.4",
     "@types/node": "^12.11.7",
-    "eslint": "^7.19.0",
+    "@types/vscode": "^1.56.0",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
+    "eslint": "^7.19.0",
     "glob": "^7.1.6",
     "mocha": "^8.2.1",
     "typescript": "^4.1.3",
     "vscode-test": "^1.5.0"
+  },
+  "dependencies": {
+    "@vuese/parser": "^2.10.3",
+    "fs-extra": "^10.0.0",
+    "loadsh": "^0.0.4",
+    "pretty": "^2.0.0"
   }
 }

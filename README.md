@@ -1,70 +1,90 @@
-# vscode-vue-components-helper README
+# vscode-vue-components-helper
 
-This is the README for your extension "vscode-vue-components-helper". After writing up a brief description, we recommend including the following sections.
 
-## Features
+> vscode-vue-components-helper is a VS Code extension for Vue.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Feature
 
-For example if there is an image subfolder under your extension project workspace:
+* Autocomplete
 
-\!\[feature X\]\(images/feature-x.png\)
+## Autocomplete
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+![autocomplete](./assets/use.gif)
 
-## Requirements
+* Distinguish and auto complete property and method for every components tag.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Configuration
 
-## Extension Settings
+1. Create component label configuration file `touch tags.js`
+```javascript
+// tags.js
+module.exports = {
+  "global-demo-button": {
+    // Default fill properties
+    defaults: ["type"],
+    // Label attribute list
+    attributes: [
+      "type",
+      "size",
+    ],
+    // Annotation
+    description: "to trigger an operation",
+  },
+  // More ...
+}
+```
+2. Create a component property profile `touch attrs.js`
+```javascript
+// attrs.js
+module.exports = {
+  "global-demo-button/type": {
+    // Optional
+    options: [
+      "primary",
+      "others",
+      "default",
+      "black",
+    ],
+    // Defaults
+    defaultValue: "primary",
+    // Attribute value type
+    optionType: "String",
+    // Prompt
+    description: "to trigger an operation",
+  },
+  "global-demo-button/size": {
+    options: ["medium", "small", "mini"],
+    defaultValue: "medium",
+    optionType: "String",
+    description: "to trigger an operation",
+  },
+  // More ...
+}
+```
+3. Configure plugin
+> vscode => preference => setting up => expand => vscode-vue-components-helper
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+![vscode-setting.png](./assets/vscode-setting.png)
+input attrs.js 、 tags.js file path.
+```
+// examples
+windows: C:/PATH/.../tags.js
+macOS: /Users/PATH/.../tags.js
+```
 
-For example:
+4. Complete
 
-This extension contributes the following settings:
+## Support
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+* Vue
 
-## Known Issues
+## Contribution
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+If you want to help improve this project, Please fork and initiate. a pull request after you fix some bugs or finished some new features. Your pull request will make vscode-vue-components-helper better.
 
-## Release Notes
+## LICENSE
 
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+MIT
 
 -----------------------------------------------------------------------------------------------------------
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+## **Enjoy!**
