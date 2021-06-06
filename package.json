@@ -2,7 +2,7 @@
   "name": "vscode-vue-components-helper",
   "displayName": "vscode-vue-components-helper",
   "description": "A vscode extension for vue components helper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "icon": "assets/icon.png",
   "engines": {
     "vscode": "^1.30.0"
@@ -38,11 +38,13 @@
         },
         "vscode-vue-components-helper.tags-file-path": {
           "type": "string",
-          "default": "/"
+          "default": "/",
+          "description": "component label configuration file (full path)."
         },
         "vscode-vue-components-helper.attrs-file-path": {
           "type": "string",
-          "default": "/"
+          "default": "/",
+          "description": "component property profile (full path)."
         }
       }
     }
