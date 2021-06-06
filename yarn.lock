@@ -172,10 +172,10 @@
   resolved "https://registry.nlark.com/@types/node/download/@types/node-12.20.14.tgz#9caf7eea0df08b406829889cc015256a6d81ab10"
   integrity sha1-nK9+6g3wi0BoKYicwBUlam2BqxA=
 
-"@types/vscode@^1.56.0":
-  version "1.56.0"
-  resolved "https://registry.nlark.com/@types/vscode/download/@types/vscode-1.56.0.tgz#2a75ee6d66e529295648b0b6ee43824564ed9c1a"
-  integrity sha1-KnXubWblKSlWSLC27kOCRWTtnBo=
+"@types/vscode@1.30.0":
+  version "1.30.0"
+  resolved "https://registry.nlark.com/@types/vscode/download/@types/vscode-1.30.0.tgz#3e17ab16530b91c2abec4f114c77d8606cb5e286"
+  integrity sha1-PherFlMLkcKr7E8RTHfYYGy14oY=
 
 "@typescript-eslint/eslint-plugin@^4.14.1":
   version "4.26.0"
@@ -1151,11 +1151,6 @@ listenercount@~1.0.1:
   version "1.0.1"
   resolved "https://registry.npm.taobao.org/listenercount/download/listenercount-1.0.1.tgz#84c8a72ab59c4725321480c975e6508342e70937"
   integrity sha1-hMinKrWcRyUyFIDJdeZQg0LnCTc=
-
-loadsh@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.npm.taobao.org/loadsh/download/loadsh-0.0.4.tgz#5314babd12bb13315dde024a4ca70758c5489d2d"
-  integrity sha1-UxS6vRK7EzFd3gJKTKcHWMVInS0=
 
 locate-path@^6.0.0:
   version "6.0.0"
