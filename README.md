@@ -72,7 +72,9 @@ windows: C:/PATH/.../tags.js
 macOS: /Users/PATH/.../tags.js
 ```
 
-4. Complete
+4. Reopen vscode
+
+5. Complete
 
 ## Support
 
