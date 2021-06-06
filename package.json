@@ -38,11 +38,13 @@
         },
         "vscode-vue-components-helper.tags-file-path": {
           "type": "string",
-          "default": "/"
+          "default": "/",
+          "description": "component label configuration file (full path)."
         },
         "vscode-vue-components-helper.attrs-file-path": {
           "type": "string",
-          "default": "/"
+          "default": "/",
+          "description": "component property profile (full path)."
         }
       }
     }
