@@ -11,7 +11,7 @@ const path = require("path");
 
 function getAttrs() {
   let ATTRS;
-  const config = workspace.getConfiguration("vscode-vue-components-helper");
+  const config = workspace.getConfiguration("tsportal-helper");
   const attrsFilePath: string = config.get("attrs-file-path");
   try {
     const _resPath = path.resolve(attrsFilePath);

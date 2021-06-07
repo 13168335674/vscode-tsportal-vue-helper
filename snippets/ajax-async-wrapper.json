@@ -1,0 +1,10 @@
+{
+  "asyncWrapper": {
+    "prefix": "aw",
+    "body": [
+      "const [err, res] = await ${1:$CLIPBOARD}({});",
+      "if (err) {\n  return Promise.reject(err);\n}"
+    ],
+    "description": "Ajax async wrapper~"
+  }
+}

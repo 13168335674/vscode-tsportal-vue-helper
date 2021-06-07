@@ -1,0 +1,23 @@
+{
+  "postWrapper": {
+    "prefix": "postw",
+    "body": [
+			"",
+      "export const cmd = data => {",
+      "  return POST_WRAP('${1:$CLIPBOARD}', data);",
+			"};",
+			""
+    ],
+    "description": "post wrapper~"
+  },
+	"getWrapper": {
+    "prefix": "getw",
+    "body": [
+			"",
+      "export const cmd = params => {",
+      "  return GET_WRAP('${1:$CLIPBOARD}', params);",
+			"};"
+    ],
+    "description": "get wrapper~"
+  }
+}

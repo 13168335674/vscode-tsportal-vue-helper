@@ -1,7 +1,7 @@
-# vscode-vue-components-helper
+# tsportal-helper
 
 
-> vscode-vue-components-helper is a VS Code extension for Vue.
+> tsportal-helper is a VS Code extension for Vue.
 
 ## Feature
 
@@ -62,7 +62,7 @@ module.exports = {
 }
 ```
 3. Configure plugin
-> vscode => preference => setting up => expand => vscode-vue-components-helper
+> vscode => preference => setting up => expand => tsportal-helper
 
 ![vscode-setting.png](./assets/vscode-setting.png)
 input attrs.js 、 tags.js file path.
@@ -82,7 +82,7 @@ macOS: /Users/PATH/.../tags.js
 
 ## Contribution
 
-If you want to help improve this project, Please fork and initiate. a pull request after you fix some bugs or finished some new features. Your pull request will make vscode-vue-components-helper better.
+If you want to help improve this project, Please fork and initiate. a pull request after you fix some bugs or finished some new features. Your pull request will make tsportal-helper better.
 
 ## LICENSE
 

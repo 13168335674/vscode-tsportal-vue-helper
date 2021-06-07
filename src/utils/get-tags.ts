@@ -11,7 +11,7 @@ const path = require("path");
 
 function getTags() {
   let TAGS;
-  const config = workspace.getConfiguration("vscode-vue-components-helper");
+  const config = workspace.getConfiguration("tsportal-helper");
   const tagsFilePath: string = config.get("tags-file-path");
   try {
     const _resPath = path.resolve(tagsFilePath);

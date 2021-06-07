@@ -13,7 +13,7 @@ import {
   TextDocument,
   workspace,
 } from "vscode";
-
+import * as vscode from "vscode";
 import getTags from "./utils/get-tags";
 import getAttrs from "./utils/get-attrs";
 
@@ -31,6 +31,19 @@ export class App {
   private _disposable!: Disposable;
   public WORD_REG: RegExp =
     /(-?\d*\.\d\w*)|([^\`\~\!\@\$\^\&\*\(\)\=\+\[\{\]\}\\\|\;\:\'\"\,\.\<\>\/\s]+)/gi;
+
+  checkWorkDir() {
+    const config = workspace.getConfiguration("tsportal-helper");
+    const foldersArr: [string] = config.get("workspace-folders");
+    if (!foldersArr.length) {
+      return false;
+    } else if (vscode.workspace.workspaceFolders !== undefined) {
+      const fsPath = vscode.workspace.workspaceFolders[0].uri.path;
+      return foldersArr.some((item) => fsPath.indexOf(item) > -1);
+    } else {
+      return false;
+    }
+  }
 
   setConfig() {
     // https://github.com/Microsoft/vscode/issues/24464
@@ -115,7 +128,7 @@ export class AntdvCompletionItemProvider implements CompletionItemProvider {
         )
       ),
       kind: CompletionItemKind.Snippet,
-      detail: "Vue Components Helper",
+      detail: "Tsportal Helper",
       documentation: tagVal.description,
     };
   }
@@ -281,7 +294,7 @@ export class AntdvCompletionItemProvider implements CompletionItemProvider {
           type && type === "method"
             ? CompletionItemKind.Method
             : CompletionItemKind.Property,
-        detail: "Vue Components Helper",
+        detail: "Tsportal Helper",
         documentation,
       };
     } else {
@@ -304,7 +317,7 @@ export class AntdvCompletionItemProvider implements CompletionItemProvider {
     this._document = document;
     this._position = position;
 
-    const config = workspace.getConfiguration("vscode-vue-components-helper");
+    const config = workspace.getConfiguration("tsportal-helper");
     this.size = config.get("indent-size");
     const normalQuotes = config.get("quotes") === "double" ? '"' : "'";
     this.quotes = normalQuotes;

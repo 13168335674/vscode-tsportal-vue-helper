@@ -1,0 +1,32 @@
+{
+  "Vue2 Template": {
+    "prefix": "vue2-template",
+    "body": [
+      "<template>",
+      "  <div class=\"${1:${TM_FILENAME_BASE:page}}\"></div>",
+      "</template>",
+      "",
+      "<script>",
+      "export default {",
+      "  name: \"$1\",",
+      "  components: {},",
+      "  props: {},",
+      "  data() {",
+      "    return {};",
+      "  },",
+      "  computed: {},",
+      "  watch: {},",
+      "  created() {},",
+      "  mounted() {},",
+      "  methods: {}",
+      "};",
+      "</script>",
+      "",
+      "<style lang='scss' scoped>",
+      ".$1 {",
+      "}",
+      "</style>"
+    ],
+    "description": "Vue2 Template"
+  }
+}

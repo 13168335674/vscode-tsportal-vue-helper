@@ -1,8 +1,8 @@
 {
-  "name": "vscode-vue-components-helper",
-  "displayName": "vscode-vue-components-helper",
-  "description": "A vscode extension for vue components helper",
-  "version": "0.1.1",
+  "name": "vscode-tsportal-helper",
+  "displayName": "vscode-tsportal-helper",
+  "description": "A vscode extension for tsportal helper",
+  "version": "0.1.0",
   "icon": "assets/icon.png",
   "engines": {
     "vscode": "^1.30.0"
@@ -10,7 +10,7 @@
   "publisher": "adi",
   "repository": {
     "type": "git",
-    "url": "https://github.com/13168335674/vscode-vue-components-helper"
+    "url": "https://github.com/13168335674/tsportal-helper"
   },
   "categories": [
     "Snippets",
@@ -25,29 +25,50 @@
   "contributes": {
     "configuration": {
       "type": "object",
-      "title": "Vscode Vue Components Helper Configuration",
+      "title": "tsportal Helper Configuration",
       "properties": {
-        "vscode-vue-components-helper.indent-size": {
+        "tsportal-helper.indent-size": {
           "type": "number",
           "default": 2,
           "description": "Indentation size of snippets"
         },
-        "vscode-vue-components-helper.quotes": {
+        "tsportal-helper.quotes": {
           "type": "string",
           "default": "double"
         },
-        "vscode-vue-components-helper.tags-file-path": {
+        "tsportal-helper.tags-file-path": {
           "type": "string",
           "default": "/",
           "description": "component label configuration file (full path)."
         },
-        "vscode-vue-components-helper.attrs-file-path": {
+        "tsportal-helper.attrs-file-path": {
           "type": "string",
           "default": "/",
           "description": "component property profile (full path)."
+        },
+        "tsportal-helper.workspace-folders": {
+          "type": "array",
+          "default": [
+            "tsportal_vuecli"
+          ],
+          "description": "The name of the project to use the plug-in."
         }
       }
-    }
+    },
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/ajax-async-wrapper.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/api.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/vue2-js-template.json"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "yarn run compile",
