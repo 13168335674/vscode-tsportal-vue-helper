@@ -2,7 +2,7 @@
   "name": "vscode-tsportal-helper",
   "displayName": "vscode-tsportal-helper",
   "description": "A vscode extension for tsportal helper",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "icon": "assets/icon.png",
   "engines": {
     "vscode": "^1.30.0"
@@ -10,7 +10,7 @@
   "publisher": "adi",
   "repository": {
     "type": "git",
-    "url": "https://github.com/13168335674/tsportal-helper"
+    "url": "https://github.com/13168335674/vscode-tsportal-vue-helper"
   },
   "categories": [
     "Snippets",
