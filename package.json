@@ -2,7 +2,7 @@
   "name": "vscode-tsportal-helper",
   "displayName": "vscode-tsportal-helper",
   "description": "A vscode extension for tsportal helper",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "icon": "assets/icon.png",
   "engines": {
     "vscode": "^1.30.0"
@@ -38,18 +38,19 @@
         },
         "tsportal-helper.tags-file-path": {
           "type": "string",
-          "default": "/",
+          "default": "C:\\path\\tags.js",
           "description": "component label configuration file (full path)."
         },
         "tsportal-helper.attrs-file-path": {
           "type": "string",
-          "default": "/",
+          "default": "C:\\path\\attrs.js",
           "description": "component property profile (full path)."
         },
         "tsportal-helper.workspace-folders": {
           "type": "array",
           "default": [
-            "tsportal_vuecli"
+            "tsportal_vuecli",
+            "tsportal"
           ],
           "description": "The name of the project to use the plug-in."
         }
