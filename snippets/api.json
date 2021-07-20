@@ -19,5 +19,45 @@
 			"};"
     ],
     "description": "get wrapper~"
+  },
+  "postWrapperByJSON": {
+    "prefix": "postws",
+		"body": [
+			"",
+      "export const cmd = data => {",
+      "  return POST_WRAP(",
+      "    '${1:$CLIPBOARD}',",
+      "    data,",
+      "    {},",
+      "    {",
+      "      headers: {",
+      "        'content-type': 'application/json;charset=UTF-8',",
+      "      },",
+			"    },",
+			"  );",
+			"};",
+			""
+    ],
+    "description": "post wrapper by json~"
+  },
+	"getWrapperByJSON": {
+    "prefix": "getws",
+		"body": [
+			"",
+      "export const cmd = data => {",
+      "  return GET_WRAP(",
+      "    '${1:$CLIPBOARD}',",
+      "    data,",
+      "    {},",
+      "    {",
+      "      headers: {",
+      "        'content-type': 'application/json;charset=UTF-8',",
+      "      },",
+			"    },",
+			"  );",
+			"};",
+			""
+    ],
+    "description": "get wrapper by json~"
   }
 }
