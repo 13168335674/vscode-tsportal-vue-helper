@@ -2,7 +2,7 @@
   "name": "vscode-tsportal-helper",
   "displayName": "vscode-tsportal-helper",
   "description": "A vscode extension for tsportal helper",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "icon": "assets/icon.png",
   "engines": {
     "vscode": "^1.30.0"
@@ -50,6 +50,7 @@
           "type": "array",
           "default": [
             "tsportal_vuecli",
+            "tsportal-vuecli",
             "tsportal"
           ],
           "description": "The name of the project to use the plug-in."
